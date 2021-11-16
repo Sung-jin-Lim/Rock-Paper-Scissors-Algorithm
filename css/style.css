@@ -1,0 +1,78 @@
+body {
+  background-color: #ccc;
+  font-size: 18px;
+}
+
+.roundNumber,
+p {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.selections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.selections button {
+  font-size: 5rem;
+}
+
+.selection {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 2rem;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+.selection:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.results {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results div {
+  font-size: 2rem;
+}
+
+.results div span {
+  font-size: 2rem;
+}
+
+.result-score {
+  margin-left: 0.1rem;
+  font-size: 0.5rem;
+  color: #333;
+}
+
+.result-selection {
+  opacity: 0.5;
+}
+
+.result-selection.winner {
+  opacity: 1;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */

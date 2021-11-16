@@ -54,7 +54,7 @@ function makeSelection(selection) {
           var computerSelection = randomSelection();
         }
       } else {
-        console.log("error");
+        var computerSelection = randomSelection();
       }
     }
   }

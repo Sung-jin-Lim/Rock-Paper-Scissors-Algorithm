@@ -40,15 +40,26 @@ function makeSelection(selection) {
     var computerSelection = randomSelection();
   }
 
+  // checks input value
+
   if (document.querySelector(".roundNumber").innerHTML >= 1) {
-    var computerSelection = superSelection();
+    // for loop for 1-100
+
+    for (let i = 1; i < 101; i++) {
+      if (document.querySelector("input").value == i) {
+        const randomHundred = Math.floor(Math.random() * 100);
+        if (randomHundred < i) {
+          var computerSelection = superSelection();
+        } else {
+          var computerSelection = randomSelection();
+        }
+      } else {
+        console.log("error");
+      }
+    }
   }
   const yourWinner = isWinner(selection, computerSelection);
   const computerWinner = isWinner(computerSelection, selection);
-
-  if ((document.querySelector(".roundNumber").innerHTML = 1)) {
-    console.log("round1");
-  }
 
   addSelectionResult(computerSelection, computerWinner);
   addSelectionResult(selection, yourWinner);

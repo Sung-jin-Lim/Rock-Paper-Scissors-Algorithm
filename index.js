@@ -1,3 +1,12 @@
+// button cooldown:
+// function myFunction() {
+//   console.log("clicked !!");
+//   document.getElementsByClassName("selection").disabled = true;
+//   setTimeout(function () {
+//     document.getElementsByClassName("selection").disabled = false;
+//   }, 2000);
+// }
+
 const selectionButtons = document.querySelectorAll("[data-selection]");
 const finalColumn = document.querySelector("[data-final-column]");
 const computerScoreSpan = document.querySelector("[data-computer-score]");
@@ -45,7 +54,7 @@ function makeSelection(selection) {
   if (document.querySelector(".roundNumber").innerHTML >= 1) {
     // for loop for 1-100
 
-    for (let i = 1; i < 101; i++) {
+    for (let i = 0; i < 101; i++) {
       if (document.querySelector("input").value == i) {
         const randomHundred = Math.floor(Math.random() * 100);
         if (randomHundred < i) {
